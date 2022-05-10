@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="model2_shop">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <property name="context-root" value="model2_shop"/>
+        <property name="java-output-path" value="/model2_shop/bin"/>
+    </wb-module>
+</project-modules>

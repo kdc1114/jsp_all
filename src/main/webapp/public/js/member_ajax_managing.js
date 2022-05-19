@@ -81,7 +81,7 @@ async function memListFetch(){
 // 리스트 아이디 중복체크
 async function idCheck(){
 	const id=memForm.id.value;
-	const idReg=/^[a-zA-Z]+[a-z0-9A-Z]{3,19}$/g;
+	const idReg=/^[a-zA-Z]+[a-z0-9A-Z]{4,19}$/g;
 	const res=await fetch("./id_check.do?id="+id);
 	const json=await res.json();
 	if(!id){
@@ -269,7 +269,7 @@ listReBtn3.onclick=function(){
 // 핸드폰 중복 및 형식체크
 memForm.phone.addEventListener("blur",async()=>{
 	const phone=memForm.phone.value;
-	const pform=/^[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}/;
+	const pform=/^[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}$/g;
 	let res=await fetch("./phone_check.do?phone="+phone);
 	let json=await res.json();
 	if(pform.test(phone)){
@@ -307,7 +307,7 @@ memModifyForm.phone.addEventListener("blur",async()=>{
 // 이메일 중복 및 형식체크
 memForm.email.addEventListener("blur",async()=>{
 	const email=memForm.email.value;
-	const eform=/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]/ig;
+	const eform=/^[0-9a-zA-Z]*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[0-9a-zA-Z]{2,3}$/ig;
 	let res=await fetch("./email_check.do?email="+email);
 	let json=await res.json();
 	if(eform.test(email)){

@@ -346,11 +346,6 @@ memModifyForm.email.addEventListener("blur",async()=>{
 function form_reset(){
 	memForm.reset();
 };
-// 수정 폼 리셋
-const formReset=document.getElementById("formReset");
-memForm.addEventListener("reset",()=>{
-	
-});
 
 
 

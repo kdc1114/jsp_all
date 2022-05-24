@@ -65,9 +65,6 @@ text-align: center;
 				<th class="col-2">DETAIL_IMG</th>
 				<th class="col-2">MODEL_NUM</th>
 				<th class="col-2">MEMBER_ID</th>
-<!-- 			<th class="col-2">POST_TIME</th>
-				<th class="col-2">SALE_TIME</th>
-				<th class="col-2">SALE_END_TIME</th> -->
 				<th class="col-1">STATE</th>
 				<th class="col-1">C_NUM</th>
   			</tr>
@@ -85,9 +82,6 @@ text-align: center;
   				<td><%=item.getDetail_img() %></td>
   				<td><%=item.getModel_num() %></td>
   				<td><%=item.getMember_id() %></td>
-<!--			<td></td>
-  				<td></td>
-  				<td></td> -->
   				<td><%=item.getState() %></td>
   				<td><%=item.getCate_num() %></td>
   			</tr>

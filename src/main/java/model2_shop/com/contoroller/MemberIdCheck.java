@@ -20,7 +20,6 @@ public class MemberIdCheck extends HttpServlet{
 		String id=req.getParameter("id");
 		
 		resp.setContentType("json/application; charset=UTF-8");
-		// java에 JSON 라이브러리가 없어서 추가해서 사용해야한다.
 		MemberVo mem=null;
 		try {
 			mem=memDao.detail(id);

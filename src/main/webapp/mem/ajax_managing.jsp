@@ -203,7 +203,7 @@ text-align: center;
 	  	<form name="memModifyForm">
 	  		<p class="input-group">
 	  			<label for="modifyFormId" class="input-group-text">아이디</label>
-	  			<input name="id" type="text" class="form-control" id="modifyFormId" autocomplete="off" readonly>
+	  			<input name="id" type="text" class="form-control" id="modifyFormId" autocomplete="off" readonly value="">
 	  		</p>
 	  		<p class="input-group">
 	  			<label for="modifyFormPw" class="input-group-text">비밀번호</label>
@@ -251,7 +251,6 @@ text-align: center;
 	  		</p>
 	  		<p class="float-end">
 	  			<a class="btn btn-outline-danger" href="javascript:void(0)" onclick="modifyDel()">삭제</a>
-				<button id="formReset" class="btn btn-outline-warning" type="reset">리셋</button>
 				<button class="btn btn-outline-primary" type="submit">수정</button>
 			</p>
 	  	</form>

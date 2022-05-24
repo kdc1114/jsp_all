@@ -18,9 +18,10 @@
 		// session.invalidate(); // 세션을 만료해서 모두 삭제
 %>
 <script>alert("아이디와 패스워드를 확인하세요!");</script>
-<%} 
+<%}
 	Object login_msg=session.getAttribute("login_msg");
 	Object login_item=session.getAttribute("login_item");
+	Object login_cate=session.getAttribute("login_cate");
 	if(login_msg!=null){
 		session.removeAttribute("login_msg");
 %>
@@ -32,20 +33,29 @@
 %>
 <script>alert("<%=login_item%>")</script>
 <%} %>
+<%
+	if(login_cate!=null){
+		session.removeAttribute("login_cate");
+%>
+<script>alert("<%=login_cate%>")</script>
+<%} %>
 	<%@ include file="/header_nav.jsp" %>
 	<h1>샵 스프링 로그인 페이지</h1>
+<%
+	if(login==null || !(boolean)login){
+%>	
 	<div class="d-flex justify-content-center align-items-center" style="height: calc(100vh - 200px);">
 		<form action="<%=request.getContextPath() %>/login.do" method="post" style="width: 600px;">
 			<div class="mb-3 row">
 		    <label for="staticEmail" class="col-sm-2 col-form-label">아이디</label>
 		    <div class="col-sm-10">
-		      <input name="id" type="text" class="form-control" autocomplete="off" id="staticEmail" value="<%=(id!=null)?id:""%>">
+		      <input name="id" type="text" class="form-control" autocomplete="off" id="staticEmail" value="super">
 		    </div>
 		  	</div>
 		  	<div class="mb-3 row">
 		    <label for="inputPassword" class="col-sm-2 col-form-label">비밀번호</label>
 		    <div class="col-sm-10">
-		      <input name="pw" type="password" autocomplete="off" class="form-control" id="inputPassword">
+		      <input name="pw" type="password" autocomplete="off" class="form-control" id="inputPassword" value="super1234">
 		    </div>
 	    	</div>
 		    <div class="col-12">
@@ -54,5 +64,10 @@
 		    </div>
 		</form>
 	</div>
+<%}else{ %>
+	<div class="d-flex justify-content-center align-items-center" style="height: calc(100vh - 200px);">
+	 	<a class="btn btn-secondary" href="<%=request.getContextPath()%>/logout.do" style="width: 600px;">로그아웃</a>
+	</div>
+<%} %>
 </body>
 </html>

@@ -144,36 +144,6 @@ public class ItemDao implements ItemDaoAble{
 			return false;
 		}
 	}
-	@Override
-	public boolean delete(int[] num) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public List<ItemVo> list(int page, String writer) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public ItemVo detail(int num, String writer) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public boolean delete(int num, String writer) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean delete(int[] num, String writer) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public List<ItemVo> sale_list(int page) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	// 톰캣의 메인이 아니고 직접 제작한 자바 어플
 	public static void main(String[] args) {
 		try {

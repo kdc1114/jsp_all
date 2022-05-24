@@ -15,7 +15,7 @@
 		<blockquote class="blockquote">
 		<h1 class="h1">아이템 수정</h1>
 		</blockquote>
-		<form action="./update.do" method="post" name="itemModifyForm">
+		<form action="./update.do" method="post" name="itemModifyForm" enctype="multipart/form-data">
 			<p class="input-group">
   					<label for="itemFormModifyItemNum" class="input-group-text">상품번호</label>
   					<input name="item_num" type="text" class="form-control" id="itemFormModifyItemNum" value="<%=item.getItem_num() %>" readonly>
@@ -68,11 +68,11 @@
 				</p>
 				<p class="input-group">
   					<label for="itemFormModifyMainImg" class="input-group-text">상품 메인이미지</label>
-  					<input name="main_img" type="text" class="form-control" id="itemFormModifyMainImg" value="<%=item.getMain_img()%>">
+  					<input name="main_img" type="file" class="form-control" id="itemFormModifyMainImg" value="<%=item.getMain_img()%>">
 				</p>
 				<p class="input-group">
   					<label for="itemFormModifyDetailImg" class="input-group-text">상품 상세이미지</label>
-  					<input name="detail_img" type="text" class="form-control" id="itemFormModifyDetailImg" value="<%=item.getDetail_img()%>">
+  					<input name="detail_img" type="file" class="form-control" id="itemFormModifyDetailImg" value="<%=item.getDetail_img()%>">
 				</p>
 				<p class="input-group">
   					<label for="itemFormModifyPostTime" class="input-group-text">상품 게시일</label>

@@ -23,25 +23,6 @@ public interface ItemDaoAble {
 	
 	// 관리자,판매자 아이템 삭제 => 위험 외래키로 참조하는 테이블이 많이 때문에
 	public boolean delete(int num) throws ClassNotFoundException, SQLException;
-	// 관리자,판매자 아이템 복수 삭제 => 위험 외래키로 참조하는 테이블이 많이 때문에
-	public boolean delete(int [] num) throws ClassNotFoundException, SQLException;
-	
-	/////////////////////////////////////판매자//////////////////////////////////
-	// 판매자 아이템 리스트
-	public List<ItemVo> list(int page,String writer) throws ClassNotFoundException, SQLException;
-	
-	// 판매자 아이템 수정페이지 , 상품 상세(서비스)
-	public ItemVo detail(int num,String writer) throws ClassNotFoundException, SQLException;
-	
-	// 판매자 아이템 삭제 => 위험 외래키로 참조하는 테이블이 많이 때문에
-	public boolean delete(int num,String writer) throws ClassNotFoundException, SQLException;
-	
-	// 판매자 아이템 복수 삭제 => 위험 외래키로 참조하는 테이블이 많이 때문에
-	public boolean delete(int [] num,String writer) throws ClassNotFoundException, SQLException;
-	
-	/////////////////////////////////////판매자//////////////////////////////////
-	// 상품 리스트(서비스) (현재 판매 중인 것만 출력)
-	public List<ItemVo> sale_list(int page) throws ClassNotFoundException, SQLException;
 }
 
 

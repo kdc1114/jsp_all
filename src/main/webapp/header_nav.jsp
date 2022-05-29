@@ -51,7 +51,7 @@ if(login!=null && (boolean)login){
 			</ul>
 <%
 	if(login!=null && (boolean)login){
-%>		    
+%>	<!-- 로그인시 보이는 -->	    
 			<div>
 				<span><%=session.getAttribute("id") %></span>
 				(<span><%=session.getAttribute("name") %></span>)
@@ -66,7 +66,7 @@ if(login!=null && (boolean)login){
 		    	<a class="" href="<%=request.getContextPath()%>/mem_new/signup.do">회원가입</a>
 		    	&nbsp;/&nbsp;
 		    	<a class="" href="<%=request.getContextPath()%>/login.do">ajax_로그인</a>
-		    </div>
+		    </div> <!-- 로그아웃시 보이는 -->
 <%} %>
 		</div>
 	</div>
